@@ -13,12 +13,12 @@ add_newline = false
 ssh_only = false
 prefix = "⟪"
 suffix = "⟫"
-trim_at = ".companyname.com"
+trim_at = "."
 disabled = false
 
-# Replace the "❯" symbol in the prompt with "➜"
+# Replace the "❯" symbol in the prompt with "λ"
 [character]      # The name of the module we are configuring is "character"
-symbol = "➜"     # The "symbol" segment is being set to "➜"
+symbol = "λ"     # The "symbol" segment is being set to "λ"
 
 # Disable the package module, hiding it from the prompt completely
 [package]
