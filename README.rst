@@ -23,7 +23,6 @@ Dependencies
 .. code-block:: bash
 
     https://github.com/mafredri/zsh-async
-    https://github.com/marzocchi/zsh-notify
     https://github.com/luismayta/zsh-functions
 
 Installation
@@ -39,7 +38,11 @@ plugin by doing the following:
 1. Go to your oh-my-zsh custom plugins directory -
     ``cd ~/.oh-my-zsh/custom/plugins``
 2. Clone the plugin
-    ``bash   git clone https://github.com/luismayta/zsh-starship``\ bash
+
+.. code-block:: bash
+
+    git clone https://github.com/luismayta/zsh-starship
+
 3. Edit your ``.zshrc`` and add
     ``plugins=( ... zsh-starship )`` to your list of
     plugins
@@ -64,14 +67,8 @@ install this plugin by doing the following:
 If you're using `Antigen <https://github.com/getantibody/antibody>`__,
 install this plugin by doing the following:
 
-1. Add :
-
-.. code-block:: bash
-
-    antibody bundle luismayta/zsh-starship
-
-    to your ``.zshrc`` where you're adding your other plugins.
-
+1. Add ``antibody bundle luismayta/zsh-starship`` to your
+    ``.zshrc`` where you're adding your other plugins.
 2. Either open a new terminal to force zsh to load the new plugin, or
     run ``antibody bundle luismayta/zsh-starship`` in a
     running zsh session.
