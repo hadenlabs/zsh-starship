@@ -8,6 +8,11 @@
 #   Luis Mayta <slovacus@gmail.com>
 #
 starship_package_name=starship
+ZSH_STARSHIP_ROOT=$(dirname "${0}":A)
+ZSH_STARSHIP_SRC_DIR="${ZSH_STARSHIP_ROOT}/src"
+ZSH_STARSHIP_CONF_DIR="${ZSH_STARSHIP_SRC_DIR}/conf"
+ZSH_HOME_CONF_DIR="${HOME}/.conf"
+
 
 function starship::dependences {
     message_info "Installing dependences for $starship_package_name"
@@ -28,8 +33,14 @@ function starship::install {
 
 function starship::post_install {
     message_info "Post Install $starship_package_name"
+    starship::sync
     message_success "Success Install $starship_package_name"
 }
+
+function starship::sync {
+    rsync -avzh --progress "${ZSH_STARSHIP_CONF_DIR}/" "${ZSH_HOME_CONF_DIR}/"
+}
+
 
 function starship::load {
     eval "$(starship init zsh)"
