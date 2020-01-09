@@ -1,0 +1,82 @@
+# ~/.config/starship.toml
+# https://github.com/starship/starship
+# sudo apt install fonts-powerline
+# /tonsky/FiraCode/wiki/Linux-instructions#installing-with-a-package-manager
+# Don't print a new line at the start of the prompt
+# wget -q --show-progress https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz
+# $ tar xvf starship-x86_64-unknown-linux-gnu.tar.gz
+# $ sudo mv starship /usr/local/bin/
+#
+add_newline = false
+
+[hostname]
+ssh_only = false
+prefix = "⟪"
+suffix = "⟫"
+trim_at = ".companyname.com"
+disabled = false
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]      # The name of the module we are configuring is "character"
+symbol = "➜"     # The "symbol" segment is being set to "➜"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[aws]
+style = "bold blue"
+symbol = "🅰 "
+display_items = "region"
+
+[directory]
+truncation_length = 8
+
+# GIT CONFIG
+[git_status]
+# conflicted = "🏳"
+# ahead = "🏎💨"
+# behind = "😰"
+# diverged = "😵"
+# untracked = "🤷‍"
+# stashed = "📦"
+# modified = "📝"
+# staged.value = "++"
+# staged.style = "green"
+# staged_count.enabled = true
+# staged_count.style = "green"
+# renamed = "👅"
+# deleted = "🗑"
+
+[git_state]
+progress_divider = " of "
+cherry_pick = "🍒 PICKING"
+
+[git_branch]
+symbol = " "
+# symbol = " 🌱 "
+truncation_length = 16
+truncation_symbol = ""
+
+[kubernetes]
+symbol = "⛵ "
+style = "dim green"
+disabled = true
+
+[memory_usage]
+show_percentage = true
+show_swap = true
+threshold = -1
+symbol = " "
+style = "bold dimmed green"
+
+[java]
+#symbol = "🌟 "
+
+[time]
+disabled = true
+format = "🕙[ %T ]"
+utc_time_offset = -5
+
+[username]
+disabled = true
