@@ -1,0 +1,9 @@
+image: python:3.8.0
+
+before_script:
+  - make setup
+  - make test.lint
+
+test:
+  script:
+    - make test
