@@ -4,7 +4,7 @@ MAINTAINER Luis Mayta <@slovacus>
 
 ARG stage
 
-LABEL NAME air_pollution-doc
+LABEL NAME zsh-starship-doc
 
 ENV PACKAGES bash \
   git \
