@@ -16,6 +16,10 @@ ZSH_HOME_CONF_DIR="${HOME}/.config"
 
 function starship::dependences {
     message_info "Installing dependences for $starship_package_name"
+    if ! type -p brew > /dev/null; then
+        message_warning "it's neccesary install brew, please use 'antibody bundle luismayta/zsh-brew branch:develop'"
+        return
+    fi
     message_success "Installed dependences for $starship_package_name"
 }
 
@@ -27,7 +31,7 @@ function starship::packages {
 function starship::install {
     starship::dependences
     message_info "Installing $starship_package_name"
-    curl -fsSL https://starship.rs/install.sh | bash
+    brew install starship
     message_success "Installed $starship_package_name"
 }
 
