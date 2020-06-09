@@ -12,5 +12,3 @@ services:
     build:
       args:
         stage: test
-    volumes:
-      - .:/usr/src
