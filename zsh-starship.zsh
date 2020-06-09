@@ -9,8 +9,7 @@
 #
 starship_package_name=starship
 ZSH_STARSHIP_ROOT=$(dirname "${0}")
-ZSH_STARSHIP_SRC_DIR="${ZSH_STARSHIP_ROOT}/src"
-ZSH_STARSHIP_CONF_DIR="${ZSH_STARSHIP_SRC_DIR}/config"
+ZSH_STARSHIP_CONF_DIR="${ZSH_STARSHIP_ROOT}/config"
 ZSH_HOME_CONF_DIR="${HOME}/.config"
 
 
