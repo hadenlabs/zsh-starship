@@ -27,34 +27,34 @@ disabled = true
 [aws]
 style = "bold blue"
 symbol = "🅰 "
-display_items = "region"
+display_items = "all"
 
 [directory]
 truncation_length = 8
 
 # GIT CONFIG
 [git_status]
-# conflicted = "🏳"
-# ahead = "🏎💨"
-# behind = "😰"
-# diverged = "😵"
-# untracked = "🤷‍"
-# stashed = "📦"
-# modified = "📝"
-# staged.value = "++"
-# staged.style = "green"
-# staged_count.enabled = true
-# staged_count.style = "green"
-# renamed = "👅"
-# deleted = "🗑"
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged.value = "++"
+staged.style = "green"
+staged_count.enabled = true
+staged_count.style = "green"
+renamed = "👅"
+deleted = "🗑"
 
 [git_state]
 progress_divider = " of "
 cherry_pick = "🍒 PICKING"
 
 [git_branch]
-symbol = " "
-# symbol = " 🌱 "
+# symbol = " "
+symbol = " 🌱 "
 truncation_length = 16
 truncation_symbol = ""
 
@@ -79,4 +79,4 @@ format = "🕙[ %T ]"
 utc_time_offset = -5
 
 [username]
-disabled = true
+disabled = false
