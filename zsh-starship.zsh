@@ -46,7 +46,9 @@ function starship::sync {
 
 
 function starship::load {
-    eval "$(starship init zsh)"
+    if type -p starship > /dev/null; then
+        eval "$(starship init zsh)"
+    fi
 }
 
 starship::load
