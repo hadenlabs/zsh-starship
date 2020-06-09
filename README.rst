@@ -3,6 +3,8 @@ zsh-starship
 
 Implement starship for zsh
 
+|Build Status| |GitHub issues| |GitHub license|
+
 :Version: 0.0.0
 :Web: https://github.com/luismayta/zsh-starship
 :Download: https://github.com/luismayta/zsh-starship
@@ -23,6 +25,8 @@ Dependencies
 .. code-block:: bash
 
     https://github.com/mafredri/zsh-async
+    https://github.com/luismayta/zsh-core
+    https://github.com/luismayta/zsh-notify
     https://github.com/luismayta/zsh-functions
 
 Installation
@@ -86,7 +90,7 @@ Usage
 
 .. code-block:: bash
 
-    λ make setup
+  λ make setup
 
 Support
 -------
@@ -154,7 +158,7 @@ Made with :coffee: and :pizza: by `Luis Mayta`_ and `equipindustry`_.
 
 
 .. _`Github`: https://github.com/luismayta
-.. _`Linkedin`: https://www.linkedin.com/in/luismayta
+.. _`Linkedin`: https://pe.linkedin.com/in/luismayta
 .. _`Email`: slovacus@gmail.com
     :target: mailto:slovacus@gmail.com
 .. _`Twitter`: https://twitter.com/slovacus
@@ -162,25 +166,23 @@ Made with :coffee: and :pizza: by `Luis Mayta`_ and `equipindustry`_.
 .. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
 
 .. |Build Status| image:: https://travis-ci.org/luismayta/zsh-starship.svg
-    :target: https://travis-ci.org/luismayta/zsh-starship
-.. |GitHub issues| image:: https://img.shields.io/github/issues/luismaytaequipindustry/zsh-starship.svg
-    :target: https://github.com/luismayta/zsh-starship/issues
+   :target: https://travis-ci.org/luismayta/zsh-starship
+.. |GitHub issues| image:: https://img.shields.io/github/issues/luismayta/zsh-starship.svg
+   :target: https://github.com/luismayta/zsh-starship/issues
 .. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
-    :target: LICENSE
-.. |Fossa| image:: https://app.fossa.io/api/projects/git%2Bgithub.com%2Fluismayta%2Fzsh-starship.svg?type=shield
-    :target: https://app.fossa.io/projects/git%2Bgithub.com%2Fluismayta%2Fzsh-starship?ref=badge_shield
+   :target: LICENSE
 
 .. Team:
 .. |Luis Mayta| image:: https://github.com/luismayta.png?size=100
-    :target: https://github.com/luismayta
+   :target: https://github.com/luismayta
 
 .. Footer:
 .. |linkedin| image:: http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.png
-    :target: https://www.linkedin.com/in/luismayta
+   :target: https://pe.linkedin.com/in/luismayta
 .. |beacon| image:: https://ga-beacon.appspot.com/UA-65019326-1/github.com/luismayta/zsh-starship/readme
-    :target: https://github.com/luismayta/zsh-starship
+   :target: https://github.com/luismayta/zsh-starship
 .. |made| image:: https://img.shields.io/badge/Made%20with-Zsh-1f425f.svg
-    :target: http://www.zsh.org
+   :target: http://www.zsh.org
 
 .. Dependences:
 
