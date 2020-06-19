@@ -71,7 +71,6 @@ symbol = " "
 style = "bold dimmed green"
 
 [java]
-#symbol = "🌟 "
 
 [time]
 disabled = true
@@ -79,4 +78,8 @@ format = "🕙[ %T ]"
 utc_time_offset = -5
 
 [username]
-disabled = false
+
+[env_var]
+variable = "AWS_PROFILE_NAME"
+default = "unknown profile name"
+style = "dimmed bold green"
