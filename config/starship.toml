@@ -79,7 +79,7 @@ utc_time_offset = -5
 [username]
 
 [env_var]
-symbol = "🅰"
+symbol = "🅰 "
 variable = "AWS_PROFILE_NAME"
 default = "profile name"
 style = "dimmed bold green"
