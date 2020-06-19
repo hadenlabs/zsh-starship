@@ -53,7 +53,6 @@ progress_divider = " of "
 cherry_pick = "🍒 PICKING"
 
 [git_branch]
-# symbol = " "
 symbol = " 🌱 "
 truncation_length = 16
 truncation_symbol = ""
@@ -80,6 +79,7 @@ utc_time_offset = -5
 [username]
 
 [env_var]
+symbol = "🅰"
 variable = "AWS_PROFILE_NAME"
-default = "unknown profile name"
+default = "profile name"
 style = "dimmed bold green"
