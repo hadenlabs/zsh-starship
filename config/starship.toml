@@ -1,36 +1,42 @@
 # ~/.config/starship.toml
-# https://github.com/starship/starship
-# sudo apt install fonts-powerline
-# /tonsky/FiraCode/wiki/Linux-instructions#installing-with-a-package-manager
-# Don't print a new line at the start of the prompt
-# wget -q --show-progress https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz
-# $ tar xvf starship-x86_64-unknown-linux-gnu.tar.gz
-# $ sudo mv starship /usr/local/bin/
-#
+########################################
+#prompt global settings
+########################################
+
+format = "$all"
 add_newline = false
 
 [hostname]
-ssh_only = false
-prefix = "⟪"
-suffix = "⟫"
-trim_at = "."
+format = "@[$hostname]($style)"
 disabled = false
+ssh_only = true
+style = "bold green"
+
+[username]
+format = "[$user]($style) in "
+disabled = false
+show_always = true
+style_user = "blue bold"
+style_root = "red bold"
 
 # Replace the "❯" symbol in the prompt with "λ"
-[character]      # The name of the module we are configuring is "character"
-symbol = "λ"     # The "symbol" segment is being set to "λ"
+[character]
+success_symbol = "[λ](green)"
+error_symbol = "[λ](bold red)"
+vicmd_symbol = "[](bold white)"
 
 # Disable the package module, hiding it from the prompt completely
 [package]
-disabled = true
+disabled = false
 
 [aws]
-style = "bold blue"
-symbol = "🅰 "
-display_items = "all"
+format = "on [$symbol $profile]($style) "
+symbol="⛅"
 
 [directory]
-truncation_length = 8
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = "..."
 
 # GIT CONFIG
 [git_status]
@@ -50,36 +56,60 @@ deleted = "🗑"
 
 [git_state]
 progress_divider = " of "
+bisect      = "bisecting"
 cherry_pick = "🍒 PICKING"
+merge       = "merging"
+rebase      = "rebasing"
+revert      = "reverting"
 
 [git_branch]
 symbol = " 🌱 "
-truncation_length = 16
-truncation_symbol = ""
+format = '([on](#A0A0AD) [$symbol$branch]($style) )'
+style = "dim green"
 
 [kubernetes]
-symbol = "⛵ "
+symbol = "⛵"
 style = "dim green"
 disabled = true
 
+## Memory
 [memory_usage]
-show_percentage = true
-show_swap = true
-threshold = -1
-symbol = " "
-style = "bold dimmed green"
+disabled = true
+threshold = 75
+format = "[RAM: ${ram}]($style) "
+style = "bold dimmed white"
 
-[java]
+[jobs]
+# doc: https://starship.rs/config/#jobs
+symbol = "🏃️"
+threshold = 0
+format = "[$symbol$number]($style) "
 
 [time]
+symbol = "🕙"
 disabled = true
-format = "🕙[ %T ]"
-utc_time_offset = -5
+format = "[$symbol][$time ]($style)"
+style = "bold yellow"
+use_12hr = false
+#time_format = "%Y/%m/%d %T"
+time_range="-"  # always: time_range="00:00:00-23:59:59"
 
-[username]
+[battery]
+disabled = false
+full_symbol = "🔋"
+charging_symbol = "⚡"
+discharging_symbol = "🔋 "
+[[battery.display]]
+threshold = 8
+style = "bold green"
 
 [env_var]
-symbol = "🅰 "
+symbol="⛅"
 variable = "AWS_PROFILE_NAME"
 default = "profile name"
-style = "dimmed bold green"
+format = "in [$symbol $env_value]($style) "
+style = "blue"
+
+########################################
+# disabled: prompt detail settings
+########################################
