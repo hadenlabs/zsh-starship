@@ -6,7 +6,7 @@ If you have any problems with starting zsh-starship, please report it on GitHub:
 
 
 Who is behind zsh-starship
------------------------
+--------------------------
 
 **Organisation**:
 
