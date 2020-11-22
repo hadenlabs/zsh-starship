@@ -24,7 +24,8 @@
 .. _Redis: http://redis.io
 .. _ApacheSolr: http://lucene.apache.org/solr
 .. _Vagrant: http://www.vagrantup.comhttp://bundler.io/
-.. _Github: https://github.com
+.. _Gitlab: https://github.com
+.. _Github: https://gitlab.com
 .. _Bitbucket: https://bitbucket.org
 .. _Terraform: https://www.terraform.io/
 .. _Wercker: https://www.wercker.com/

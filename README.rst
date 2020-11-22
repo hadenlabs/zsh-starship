@@ -40,16 +40,12 @@ If you're using
 plugin by doing the following:
 
 1. Go to your oh-my-zsh custom plugins directory -
-    ``cd ~/.oh-my-zsh/custom/plugins``
+   ``cd ~/.oh-my-zsh/custom/plugins``
 2. Clone the plugin
-
-.. code-block:: bash
-
-    git clone https://github.com/luismayta/zsh-starship
-
+   ``bash   git clone https://github.com/luismayta/zsh-starship``\ bash
 3. Edit your ``.zshrc`` and add
-    ``plugins=( ... zsh-starship )`` to your list of
-    plugins
+   ``plugins=( ... zsh-starship )`` to your list of
+   plugins
 4. Open a new terminal and enjoy!
 
 `antigen <https://github.com/zsh-users/antigen>`__ users
@@ -71,11 +67,16 @@ install this plugin by doing the following:
 If you're using `Antigen <https://github.com/getantibody/antibody>`__,
 install this plugin by doing the following:
 
-1. Add ``antibody bundle luismayta/zsh-starship`` to your
-    ``.zshrc`` where you're adding your other plugins.
+1. Add :
+
+    .. code-block:: bash
+
+        antibody bundle luismayta/zsh-starship
+
+    to your ``.zshrc`` where you're adding your other plugins.
 2. Either open a new terminal to force zsh to load the new plugin, or
-    run ``antibody bundle luismayta/zsh-starship`` in a
-    running zsh session.
+   run ``antibody bundle luismayta/zsh-starship`` in a
+   running zsh session.
 3. Enjoy!
 
 Quick Start
