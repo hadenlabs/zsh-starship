@@ -1,0 +1,115 @@
+# ~/.config/starship.toml
+########################################
+#prompt global settings
+########################################
+
+format = "$all"
+add_newline = false
+
+[hostname]
+format = "@[$hostname]($style)"
+disabled = false
+ssh_only = true
+style = "bold green"
+
+[username]
+format = "[$user]($style) in "
+disabled = false
+show_always = true
+style_user = "blue bold"
+style_root = "red bold"
+
+# Replace the "❯" symbol in the prompt with "λ"
+[character]
+success_symbol = "[λ](green)"
+error_symbol = "[λ](bold red)"
+vicmd_symbol = "[](bold white)"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = false
+
+[aws]
+format = "on [$symbol $profile]($style) "
+symbol="⛅"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = "..."
+
+# GIT CONFIG
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged.value = "++"
+staged.style = "green"
+staged_count.enabled = true
+staged_count.style = "green"
+renamed = "👅"
+deleted = "🗑"
+
+[git_state]
+progress_divider = " of "
+bisect      = "bisecting"
+cherry_pick = "🍒 PICKING"
+merge       = "merging"
+rebase      = "rebasing"
+revert      = "reverting"
+
+[git_branch]
+symbol = " 🌱 "
+format = '([on](#A0A0AD) [$symbol$branch]($style) )'
+style = "dim green"
+
+[kubernetes]
+symbol = "⛵"
+style = "dim green"
+disabled = true
+
+## Memory
+[memory_usage]
+disabled = true
+threshold = 75
+format = "[RAM: ${ram}]($style) "
+style = "bold dimmed white"
+
+[jobs]
+# doc: https://starship.rs/config/#jobs
+symbol = "🏃️"
+threshold = 0
+format = "[$symbol$number]($style) "
+
+[time]
+symbol = "🕙"
+disabled = true
+format = "[$symbol][$time ]($style)"
+style = "bold yellow"
+use_12hr = false
+#time_format = "%Y/%m/%d %T"
+time_range="-"  # always: time_range="00:00:00-23:59:59"
+
+[battery]
+disabled = false
+full_symbol = "🔋"
+charging_symbol = "⚡"
+discharging_symbol = "🔋 "
+[[battery.display]]
+threshold = 8
+style = "bold green"
+
+[env_var]
+symbol="⛅"
+variable = "AWS_PROFILE_NAME"
+default = "profile name"
+format = "in [$symbol $env_value]($style) "
+style = "blue"
+
+########################################
+# disabled: prompt detail settings
+########################################
