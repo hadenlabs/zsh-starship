@@ -6,11 +6,29 @@
 format = "$all"
 add_newline = false
 
-[hostname]
-format = "@[$hostname]($style)"
+[battery]
 disabled = false
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = "💀"
+
+[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
+threshold = 10
+style = "bold red"
+
+[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+threshold = 30
+style = "bold yellow"
+
+[hostname]
+disabled = false
+format = "@[$hostname]($style)"
 ssh_only = true
 style = "bold green"
+
+[golang]
+symbol = "🐹 "
+format = "via [$symbol $version](bold cyan) "
 
 [username]
 format = "[$user]($style) in "
@@ -30,8 +48,15 @@ vicmd_symbol = "[](bold white)"
 disabled = false
 
 [aws]
-format = "on [$symbol $profile]($style) "
+format = "on [$symbol $region $profile]($style) "
+style = "bold blue"
 symbol="⛅"
+[aws.region_aliases]
+ap-southeast-2 = "au"
+us-east-1 = "va"
+
+[docker_context]
+disabled = false
 
 [directory]
 truncation_length = 3
@@ -63,45 +88,43 @@ rebase      = "rebasing"
 revert      = "reverting"
 
 [git_branch]
-symbol = " 🌱 "
+symbol = "🌱"
 format = '([on](#A0A0AD) [$symbol$branch]($style) )'
 style = "dim green"
 
 [kubernetes]
 symbol = "⛵"
 style = "dim green"
-disabled = true
+disabled = false
 
 ## Memory
 [memory_usage]
-disabled = true
-threshold = 75
-format = "[RAM: ${ram}]($style) "
-style = "bold dimmed white"
+disabled = false
+format = "[${symbol}RAM: ${ram}]($style) "
+threshold = -1
+style = "bold dimmed green"
 
 [jobs]
 # doc: https://starship.rs/config/#jobs
 symbol = "🏃️"
-threshold = 0
-format = "[$symbol$number]($style) "
+threshold = 4
+format = "[$symbol $number]($style) "
+
+[python]
+pyenv_version_name = true
+detect_extensions = []
+
+[terraform]
+disabled = false
 
 [time]
 symbol = "🕙"
 disabled = true
-format = "[$symbol][$time ]($style)"
+format = "[$symbol][$time ]($style) "
 style = "bold yellow"
 use_12hr = false
 #time_format = "%Y/%m/%d %T"
 time_range="-"  # always: time_range="00:00:00-23:59:59"
-
-[battery]
-disabled = false
-full_symbol = "🔋"
-charging_symbol = "⚡"
-discharging_symbol = "🔋 "
-[[battery.display]]
-threshold = 8
-style = "bold green"
 
 [env_var]
 symbol="⛅"
@@ -109,7 +132,3 @@ variable = "AWS_PROFILE_NAME"
 default = "profile name"
 format = "in [$symbol $env_value]($style) "
 style = "blue"
-
-########################################
-# disabled: prompt detail settings
-########################################
