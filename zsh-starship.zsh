@@ -8,6 +8,7 @@
 #   Luis Mayta <slovacus@gmail.com>
 #
 
+# shellcheck disable=SC2034  # Unused variables left for readability
 ZSH_STARSHIP_PATH=$(dirname "${0}")
 
 # shellcheck source=/dev/null
