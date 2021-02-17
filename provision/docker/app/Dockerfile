@@ -7,20 +7,7 @@ LABEL NAME zsh-starship-$stage
 ENV USERNAME developer
 
 ENV PACKAGES bash \
-  git \
-  gcc \
-  libc-dev \
-  make \
-  musl-dev \
-  openssl \
-  gcc \
-  libgdal20 \
-  libev-dev \
-  curl \
-  wget \
-  tar \
-  zsh \
-  jq
+  openssl
 
 ENV ZUNIT_VERSION "0.8.2"
 
