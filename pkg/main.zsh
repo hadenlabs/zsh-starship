@@ -23,5 +23,3 @@ function starship::pkg::main::factory {
 }
 
 starship::pkg::main::factory
-
-starship::load
