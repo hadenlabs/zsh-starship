@@ -1,6 +1,12 @@
 #!/usr/bin/env ksh
 # -*- coding: utf-8 -*-
 
+function starship::internal::load {
+    if type -p starship > /dev/null; then
+        eval "$(starship init zsh)"
+    fi
+}
+
 function starship::internal::starship::install {
     message_info "Installing ${STARSHIP_PACKAGE_NAME}"
     if ! type -p brew > /dev/null; then

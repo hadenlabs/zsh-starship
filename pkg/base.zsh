@@ -2,15 +2,12 @@
 # -*- coding: utf-8 -*-
 
 function starship::load {
-    if type -p starship > /dev/null; then
-        eval "$(starship init zsh)"
-    fi
+    starship::internal::load
 }
 
 function starship::dependences {
     message_info "Installing dependences for ${STARSHIP_PACKAGE_NAME}"
     message_success "Installed dependences for ${STARSHIP_PACKAGE_NAME}"
-
 }
 
 function starship::install {
