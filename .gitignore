@@ -1,6 +1,27 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/zsh,python,node,zsh
-# Edit at https://www.toptal.com/developers/gitignore?templates=zsh,python,node,zsh
+# Created by https://www.toptal.com/developers/gitignore/api/python,node,go,zsh
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,node,go,zsh
+
+### Go ###
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+### Go Patch ###
+/vendor/
+/Godeps/
 
 ### Node ###
 # Logs
@@ -123,7 +144,6 @@ __pycache__/
 *$py.class
 
 # C extensions
-*.so
 
 # Distribution / packaging
 .Python
@@ -282,4 +302,4 @@ zsdoc/data
 /tests/_output/*
 !/tests/_output/.gitkeep
 
-# End of https://www.toptal.com/developers/gitignore/api/zsh,python,node,zsh
+# End of https://www.toptal.com/developers/gitignore/api/python,node,go,zsh
