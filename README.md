@@ -14,24 +14,15 @@
 
 # zsh-starship
 
-[![Lint](https://github.com/luismayta/zsh-starship/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/luismayta/zsh-starship/actions) [![Issues](https://img.shields.io/github/issues/luismayta/zsh-starship.svg)](https://github.com/luismayta/zsh-starship/issues) [![Latest Release](https://img.shields.io/github/release/luismayta/zsh-starship.svg)](https://travis-ci.org/luismayta/zsh-starship/releases)
+[![Lint](https://github.com/luismayta/zsh-starship/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/luismayta/zsh-starship/actions) [![Issues](https://img.shields.io/github/issues/luismayta/zsh-starship.svg)](https://github.com/luismayta/zsh-starship/issues) [![Latest Release](https://img.shields.io/github/release/luismayta/zsh-starship.svg)](https://github.com/luismayta/zsh-starship/releases)
 
 zsh-starship plugin for zsh.
-
-This project is part of our comprehensive [hadenlabs](https://hadenlabs.com) examples of readme.
-
-## :page_facing_up: License
-
-MIT is an open-sourced software licensed under the [MIT license](LICENSE.md).
 
 ## Requirements
 
 This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
 
-```{bash}
-https://github.com/luismayta/zsh-core
-https://github.com/luismayta/zsh-notify
-```
+- [zsh-core](https://github.com/hadenlabs/zsh-core)
 
 ## Installation
 
@@ -69,13 +60,21 @@ to your `.zshrc` where you're adding your other plugins.
 
 ## Usage
 
-```bash
-make setup
-```
+## Functions
 
-## :page_facing_up: Examples
+zsh starship includes a small utility `starship`.
 
-### common
+#### `starship::post_install`
+
+Synchronizes and install configurations.
+
+#### `starship::sync`
+
+Synchronizes the configurations that are in `conf/starship.conf`
+
+#### `starship::install`
+
+Install starship
 
 ## Help
 
@@ -89,9 +88,7 @@ File a GitHub [issue](https://github.com/luismayta/zsh-starship/issues), send us
 
 Please use the [issue tracker](https://github.com/luismayta/zsh-starship/issues) to report any bugs or file feature requests.
 
-### Developing
-
-If you are interested in being a contributor and want to get involved in developing this project or [help out](https://hadenlabs.com) with our other projects, we would love to hear from you! Shoot us an [email](mailto:support@hadenlabs.com).
+### Development
 
 In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
@@ -103,7 +100,7 @@ In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
 **NOTE:** Be sure to rebase the latest changes from "upstream" before making a pull request!
 
-### Versioning
+#### Versioning
 
 Releases are managed using github release feature. We use [Semantic Versioning](http://semver.org) for all the releases. Every change made to the code base will be referred to in the release notes (except for cleanups and refactorings).
 
@@ -115,10 +112,10 @@ Copyright © 2018-2021 [Hadenlabs](https://hadenlabs.com)
 
 All other trademarks referenced herein are the property of their respective owners.
 
-## About
+## License
 
-This project is maintained and funded by [Hadenlabs](https://hadenlabs.com). Like it? Please let us know at <support@hadenlabs.com>
+The code and styles are licensed under the MIT license [See project license.](LICENSE).
 
-## Don't forget to 🌟 Star 🌟 the repo if you like this GitHub Action
+## Don't forget to 🌟 Star 🌟 the repo if you like zsh-starship
 
 [Your feedback is appreciated](https://github.com/luismayta/zsh-starship/issues)
