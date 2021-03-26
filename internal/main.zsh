@@ -18,7 +18,7 @@ function starship::internal::main::factory {
 
 starship::internal::main::factory
 
+starship::internal::load
+
 if ! type -p rsync > /dev/null; then starship::internal::rync::install; fi
 if ! type -p starship > /dev/null; then starship::internal::starship::install; fi
-
-starship::internal::load
