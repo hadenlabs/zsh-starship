@@ -14,6 +14,11 @@ function starship::config::main::factory {
         source "${ZSH_STARSHIP_PATH}"/config/linux.zsh
       ;;
     esac
+
+    # shellcheck source=/dev/null
+    source "${ZSH_STARSHIP_PATH}"/config/helper.zsh
 }
 
 starship::config::main::factory
+
+starship::config::load
