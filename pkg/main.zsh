@@ -14,7 +14,6 @@ function starship::pkg::main::factory {
         source "${ZSH_STARSHIP_PATH}"/pkg/linux.zsh
       ;;
     esac
-
     # shellcheck source=/dev/null
     source "${ZSH_STARSHIP_PATH}"/pkg/helper.zsh
 
