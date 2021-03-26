@@ -7,18 +7,6 @@
 # Name of this project
 name: zsh-starship
 
-company:
-  name: hadenlabs
-  description: |-
-    company labs
-  url: https://hadenlabs.com
-  github: https://github.com/hadenlabs
-  email: support@hadenlabs.com
-
-copyright:
-  name: Hadenlabs
-  url: https://hadenlabs.com
-
 email:
   support: support@hadenlabs.com
 
@@ -36,12 +24,12 @@ badges:
   - name: Lint
     image: https://github.com/luismayta/zsh-starship/actions/workflows/lint.yml/badge.svg?branch=develop
     url: https://github.com/luismayta/zsh-starship/actions
-  - name: 'Issues'
-    image: 'https://img.shields.io/github/issues/luismayta/zsh-starship.svg'
-    url: 'https://github.com/luismayta/zsh-starship/issues'
-  - name: 'Latest Release'
-    image: 'https://img.shields.io/github/release/luismayta/zsh-starship.svg'
-    url: 'https://travis-ci.org/luismayta/zsh-starship/releases'
+  - name: Issues
+    image: https://img.shields.io/github/issues/luismayta/zsh-starship.svg
+    url: https://github.com/luismayta/zsh-starship/issues
+  - name: Latest Release
+    image: https://img.shields.io/github/release/luismayta/zsh-starship.svg
+    url: https://github.com/luismayta/zsh-starship/releases
 
 # Short description of this project
 description: |-
@@ -51,21 +39,15 @@ requirements: |-
 
   This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
 
-  ```{bash}
-  https://github.com/luismayta/zsh-core
-  https://github.com/luismayta/zsh-notify
-  ```
+  * [zsh-core](https://github.com/hadenlabs/zsh-core)
+
+usage: |
+
 
 installation:
   - 'docs/include/installation/oh-my-zsh.md'
   - 'docs/include/installation/antigen.md'
   - 'docs/include/installation/antibody.md'
 
-# How to use this project
-usage: |-
-  ```bash
-  make setup
-  ```
-
-examples:
-  - 'docs/examples/common.md'
+include:
+  - 'docs/functions.md'
