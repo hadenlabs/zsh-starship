@@ -20,5 +20,5 @@ starship::internal::main::factory
 
 starship::internal::load
 
-if ! type -p rsync > /dev/null; then starship::internal::rync::install; fi
-if ! type -p starship > /dev/null; then starship::internal::starship::install; fi
+if ! core::exists rsync; then core::install rsync; fi
+if ! core::exists starship; then core::install starship; fi
