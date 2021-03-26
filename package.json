@@ -1,6 +1,6 @@
 {
   "name": "@luismayta/zsh-starship",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "zsh-starship for hadenlabs",
   "repository": "ssh://git@github.com/luismayta/zsh-starship.git",
   "author": "Luis Mayta <slovacus@gmail.com>",
