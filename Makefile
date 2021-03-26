@@ -18,10 +18,11 @@ else
 	PIPENV_INSTALL:=
 endif
 
+TEAM := luismayta
 REPOSITORY_DOMAIN:=github.com
-REPOSITORY_OWNER:=luismayta
+REPOSITORY_OWNER:=${TEAM}
+AWS_VAULT ?= ${TEAM}
 PROJECT := zsh-starship
-PROJECT_PORT := 3000
 
 PYTHON_VERSION=3.8.0
 NODE_VERSION=14.15.5
@@ -83,7 +84,7 @@ readme:
 		--out $(README_FILE)
 
 setup:
-	@echo "=====> install packages..."
+	@echo "==> install packages..."
 	make python.setup
 	make python.precommit
 	@cp -rf provision/git/hooks/prepare-commit-msg .git/hooks/
@@ -93,6 +94,6 @@ setup:
 	@echo ${MESSAGE_HAPPY}
 
 environment:
-	@echo "=====> loading virtualenv ${PYENV_NAME}..."
+	@echo "==> loading virtualenv ${PYENV_NAME}..."
 	make python.environment
 	@echo ${MESSAGE_HAPPY}
