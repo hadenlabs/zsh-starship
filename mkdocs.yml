@@ -15,8 +15,8 @@ extra:
   font:
     text: 'Source Sans Pro'
 
-repo_name: 'luismayta/zsh-starship'
-repo_url: 'https://github.com/luismayta/zsh-starship'
+repo_name: 'hadenlabs/zsh-starship'
+repo_url: 'https://github.com/hadenlabs/zsh-starship'
 copyright: 'Copyright © 2021 <a href="https://hadenlabs.com">hadenlabs</a>'
 
 google_analytics:
