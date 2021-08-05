@@ -14,7 +14,7 @@ discharging_symbol = "💀"
 
 [shell]
 fish_indicator = ""
-zsh_indicator = "🐚"
+zsh_indicator = "{🦾}"
 bash_indicator = "🐚"
 powershell_indicator = "_"
 disabled = false
@@ -74,18 +74,17 @@ truncation_symbol = "..."
 # GIT CONFIG
 [git_status]
 conflicted = "🏳"
-ahead = "⇡${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-behind = "⇣${count}"
 untracked = "🤷‍"
 stashed = "📦"
 modified = "📝"
 staged = '[++\($count\)](green)'
 renamed = "👅"
 deleted = "🗑"
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
 
 [git_state]
-progress_divider = " of "
 bisect      = "bisecting"
 cherry_pick = "🍒 PICKING"
 merge       = "merging"
