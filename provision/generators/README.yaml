@@ -10,26 +10,36 @@ name: zsh-starship
 email:
   support: support@hadenlabs.com
 
+confluence:
+  space: ZSH-STARSHIP
+  title: readme
+
 # Logo for this project
 #logo: docs/logo.png
 
 # License of this project
-license: 'MIT'
+license: 'LGPL-3.0'
 
 # Canonical GitHub repo
-github_repo: luismayta/zsh-starship
+github_repo: hadenlabs/zsh-starship
 
 # Badges to display
 badges:
-  - name: Lint
-    image: https://github.com/luismayta/zsh-starship/actions/workflows/lint.yml/badge.svg?branch=develop
-    url: https://github.com/luismayta/zsh-starship/actions
-  - name: Issues
-    image: https://img.shields.io/github/issues/luismayta/zsh-starship.svg
-    url: https://github.com/luismayta/zsh-starship/issues
   - name: Latest Release
-    image: https://img.shields.io/github/release/luismayta/zsh-starship.svg
-    url: https://github.com/luismayta/zsh-starship/releases
+    image: https://img.shields.io/github/release/hadenlabs/zsh-starship
+    url: https://github.com/hadenlabs/zsh-starship/releases
+  - name: Lint
+    image: https://img.shields.io/github/workflow/status/hadenlabs/zsh-starship/lint-code
+    url: https://github.com/hadenlabs/zsh-starship/actions?workflow=lint-code
+  - name: pre-commit
+    image: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+    url: https://github.com/pre-commit/pre-commit
+  - name: Conventional Commits
+    image: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
+    url: https://conventionalcommits.org
+  - name: KeepAChangelog
+    image: https://img.shields.io/badge/Keep%20A%20Changelog-1.0.0-%23E05735
+    url: https://keepachangelog.com
 
 # Short description of this project
 description: |-
