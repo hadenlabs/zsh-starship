@@ -43,14 +43,11 @@ repos:
       - id: check-docstring-first
       - id: requirements-txt-fixer
       - id: check-symlinks
-      - id: name-tests-test
-        args:
-          - --django
       - id: file-contents-sorter
       - id: fix-encoding-pragma
       - id: sort-simple-yaml
   - repo: https://github.com/hadenlabs/pre-commit-hooks
-    rev: 29c3f47f8fa0ec66d35ccbad761b7cf299e5ee19
+    rev: 6c173538c37aa802949cae5ff487d702319ba80a
     hooks:
       - id: do-not-commit
       - id: markdown-link-check
@@ -71,5 +68,3 @@ repos:
           - --path=.
           - --repo-config-path=.github/linters/.gitleaks.toml
           - --verbose
-      - id: prepare-commit-msg
-        stages: [prepare-commit-msg]
