@@ -17,7 +17,7 @@ trim_trailing_whitespace = true
 [*.{el}]
 insert_final_newline = false
 
-[*.{el,sh,md,yml,yaml,js,json,toml,ts,tsx,hcl,tf,graphql,go}]
+[*.{el,md,yml,yaml,js,json,toml,ts,tsx,hcl,tf,graphql,hbs,sh}]
 indent_style = space
 indent_size = 2
 
@@ -25,6 +25,10 @@ indent_size = 2
 [*.{py}]
 indent_style = space
 indent_size = 4
+
+[*.go]
+indent_size = 2
+indent_style = tab
 
 # Minified JavaScript files shouldn't be changed
 [**.min.js]
