@@ -14,7 +14,7 @@ discharging_symbol = "💀"
 
 [shell]
 fish_indicator = ""
-zsh_indicator = "{🦾}"
+zsh_indicator = "🦾"
 bash_indicator = "🐚"
 powershell_indicator = "_"
 disabled = false
@@ -59,6 +59,7 @@ disabled = false
 format = "on [$symbol $region $profile]($style) "
 style = "bold blue"
 symbol="⛅"
+
 [aws.region_aliases]
 ap-southeast-2 = "au"
 us-east-1 = "va"
@@ -75,11 +76,21 @@ truncate_to_repo = false
 truncation_symbol = "..."
 
 # GIT CONFIG
-
 [git_branch]
 symbol = "🌱 "
-truncation_length = 10
 truncation_symbol = ""
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
 
 [git_commit]
 commit_hash_length = 4
@@ -88,20 +99,6 @@ tag_symbol = "🔖 "
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
 cherry_pick = "[🍒 PICKING](bold red)"
-
-[git_status]
-conflicted = "⚔️ "
-ahead = "🏎️ 💨×${count} "
-behind = "🐢×${count} "
-diverged = "🔱 🏎️ 💨×${ahead_count} 🐢×${behind_count} "
-untracked = "🛤️ ×${count} "
-stashed = "📦 "
-modified = "📝×${count} "
-staged = "🗃️ ×${count} "
-renamed = "📛×${count} "
-deleted = "🗑️ ×${count} "
-style = "bright-white"
-format = "$all_status$ahead_behind"
 
 [kubernetes]
 symbol = "⛵ "
@@ -143,3 +140,36 @@ variable = "AWS_PROFILE_NAME"
 default = "profile name"
 format = "in [$symbol $env_value]($style) "
 style = "blue"
+
+[custom.giturl]
+disabled = false
+description = "Display symbol for remote Git server"
+command = """
+GIT_REMOTE=$(command git ls-remote --get-url 2> /dev/null)
+if [[ "$GIT_REMOTE" =~ "github" ]]; then
+    GIT_REMOTE_SYMBOL=""
+elif [[ "$GIT_REMOTE" =~ "gitlab" ]]; then
+    GIT_REMOTE_SYMBOL=""
+elif [[ "$GIT_REMOTE" =~ "bitbucket" ]]; then
+    GIT_REMOTE_SYMBOL=""
+elif [[ "$GIT_REMOTE" =~ "git" ]]; then
+    GIT_REMOTE_SYMBOL=""
+else
+    GIT_REMOTE_SYMBOL=""
+fi
+echo "$GIT_REMOTE_SYMBOL "
+"""
+when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
+shell = ["bash", "--noprofile", "--norc"]
+format = "$output "
+
+[custom.githash]
+disabled = false
+description = "Display git hash"
+command = """
+GIT_HASH=$(git rev-parse --short HEAD)
+echo "$GIT_HASH "
+"""
+when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
+shell = ["bash", "--noprofile", "--norc"]
+format = "$output "
