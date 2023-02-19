@@ -19,11 +19,11 @@ pydocstyle = "*"
 pygments = "*"
 pylint = "*"
 pymdown-extensions = "*"
+pytest = ">=6.2.4"
+black = "*"
 
 [packages]
 
 [scripts]
+test = "pytest"
 update = "pre-commit autoupdate"
-
-[requires]
-python_version = "3.9.2"
