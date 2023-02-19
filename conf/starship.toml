@@ -1,145 +1,21 @@
-# ~/.config/starship.toml
-########################################
+## ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█░█░▀█▀░█▀█
+## ░▀▀█░░█░░█▀█░█▀▄░▀▀█░█▀█░░█░░█▀▀
+## ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░
+## CROSS-SHELL PROMPT
+##
+## Hadenlabs starship configuration
 #prompt global settings
 ########################################
 
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = "$all"
+
+# Inserts a blank line between shell prompts
 add_newline = false
 
-[battery]
-disabled = false
-full_symbol = "🔋"
-charging_symbol = "⚡️"
-discharging_symbol = "💀"
-
-[shell]
-fish_indicator = ""
-zsh_indicator = "🦾"
-bash_indicator = "🐚"
-powershell_indicator = "_"
-disabled = false
-
-[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
-threshold = 10
-style = "bold red"
-
-[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
-threshold = 30
-style = "bold yellow"
-
-[hostname]
-disabled = false
-format = "@[$hostname]($style)"
-ssh_only = true
-style = "bold green"
-
-[golang]
-symbol = "🐹 "
-format = "via [$symbol $version](bold cyan) "
-
-[username]
-format = "[$user]($style) in "
-disabled = false
-show_always = true
-style_user = "blue bold"
-style_root = "red bold"
-
-# Replace the "❯" symbol in the prompt with "λ"
-[character]
-format = "[$symbol]($style) "
-success_symbol = "[λ](green)"
-error_symbol = "[λ](bold red)"
-vicmd_symbol = "[](bold white)"
-
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = false
-
-[aws]
-format = "on [$symbol $region $profile]($style) "
-style = "bold blue"
-symbol="⛅"
-
-[aws.region_aliases]
-ap-southeast-2 = "au"
-us-east-1 = "va"
-
-[docker_context]
-disabled = false
-
-[directory]
-home_symbol = "🏠"
-read_only = "🔒"
-style = "bold yellow"
-truncation_length = 2
-truncate_to_repo = false
-truncation_symbol = "..."
-
-# GIT CONFIG
-[git_branch]
-symbol = "🌱 "
-truncation_symbol = ""
-
-[git_status]
-conflicted = "🏳"
-ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
-untracked = "🤷"
-stashed = "📦"
-modified = "📝"
-staged = '[++\($count\)](green)'
-renamed = "👅"
-deleted = "🗑"
-
-[git_commit]
-commit_hash_length = 4
-tag_symbol = "🔖 "
-
-[git_state]
-format = '[\($state( $progress_current of $progress_total)\)]($style) '
-cherry_pick = "[🍒 PICKING](bold red)"
-
-[kubernetes]
-symbol = "⛵ "
-style = "dim green"
-disabled = false
-
-## Memory
-[memory_usage]
-disabled = false
-format = "[${symbol}RAM: ${ram}]($style) "
-threshold = -1
-style = "bold dimmed green"
-
-[jobs]
-# doc: https://starship.rs/config/#jobs
-symbol = "🏃️"
-threshold = 4
-format = "[$symbol $number]($style) "
-
-[python]
-pyenv_version_name = true
-detect_extensions = []
-
-[terraform]
-disabled = true
-
-[time]
-symbol = "🕙"
-disabled = true
-format = "[$symbol][$time ]($style) "
-style = "bold yellow"
-use_12hr = false
-#time_format = "%Y/%m/%d %T"
-time_range="-"  # always: time_range="00:00:00-23:59:59"
-
-[env_var]
-symbol="⛅"
-variable = "AWS_PROFILE_NAME"
-default = "profile name"
-format = "in [$symbol $env_value]($style) "
-style = "blue"
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
 
 [custom.giturl]
 disabled = false
@@ -173,3 +49,223 @@ echo "$GIT_HASH "
 when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
 shell = ["bash", "--noprofile", "--norc"]
 format = "$output "
+
+[custom.proxy_is_on]
+command = ""
+when = "proxy is-on"
+symbol = "歷"
+description = "Shows if proxy settings are on"
+format = "[$symbol]($style)"
+style = "fg:green"
+
+[custom.proxy_is_off]
+command = ""
+when = "proxy is-off"
+symbol = "轢"
+description = "Shows if proxy settings are off"
+format = "[$symbol]($style)"
+style = "fg:red"
+
+[sudo]
+disabled = false
+
+[battery]
+disabled = false
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = "💀"
+
+[shell]
+fish_indicator = ""
+zsh_indicator = "🐺"
+bash_indicator = "🐚"
+powershell_indicator = "_"
+disabled = false
+
+[helm]
+style = "bold fg:bright-cyan bg:#5a6374"
+format = "[  ](fg:white bg:#5a6374)[$symbol$version]($style)"
+
+[[battery.display]] # "bold red" style when capacity is between 0% and 10%
+threshold = 10
+style = "bold red"
+
+[[battery.display]] # "bold yellow" style when capacity is between 10% and 30%
+threshold = 30
+style = "bold yellow"
+
+[hostname]
+disabled = false
+format = "@[$hostname]($style) "
+ssh_only = false
+style = "bold green"
+
+[localip]
+disabled = false
+ssh_only = false
+format = '@[$localipv4](bold red) '
+
+[lua]
+format = 'via [🌕 $version](bold blue) '
+
+[dart]
+format = 'via [🔰 $version](bold red) '
+
+[deno]
+format = 'via [🦕 $version](green bold) '
+
+[golang]
+style = "bold cyan"
+symbol = "[](cyan)"
+format = "| Go [$symbol $version]($style) "
+
+[username]
+format = "[$user]($style) in "
+disabled = false
+show_always = true
+style_user = "blue bold"
+style_root = "red bold"
+
+[character]
+format = "$symbol "
+success_symbol = "[->](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[🤮 ](bold red)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = false
+
+[aws]
+format = "on [$symbol $region $profile]($style) "
+style = "bold blue"
+symbol = "⛅"
+
+[aws.region_aliases]
+ap-southeast-2 = "au"
+us-east-1 = "va"
+
+[docker_context]
+disabled = true
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+home_symbol = "🏠"
+read_only = "🔒"
+read_only_style = "red"
+style = "bold cyan"
+truncation_length = 2
+truncate_to_repo = true
+truncation_symbol = ".../"
+repo_root_style = "purple"
+fish_style_pwd_dir_length = 1
+use_logical_path = true
+
+[directory.substitutions]
+"/Volumes/Data/projects" = "🐺"
+
+# GIT CONFIG
+[git_branch]
+symbol = "🌱 "
+truncation_symbol = ""
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[kubernetes]
+disabled = false
+symbol = "⛵ "
+# style = "dim green"
+format = '[$symbol$context( \($namespace\))]($style) '
+
+[kubernetes.context_aliases]
+docker-desktop = "🐳"
+# OpenShift contexts carry the namespace and user in the kube context: `namespace/name/user`:
+".*/openshift-cluster/.*" = "openshift"
+
+# Or better, to rename every OpenShift cluster at once:
+".*/(?P<cluster>[\\w-]+)/.*" = "$cluster"
+
+"k8s:(?P<cluster_name>.*)" = "k8s: $cluster_name"
+
+# talos
+".*@talos-(?P<cluster_name>.*)" = "talos: $cluster_name"
+
+# infosis
+
+"infosis:k8s:(?P<cluster_name>.*)" = "infosis: $cluster_name"
+
+# aws
+
+"arn:aws:.*:cluster/(?P<cluster_name>.*)" = "AWS: $cluster_name"
+
+"eks:cluster:(?P<cluster_name>.*)" = "eks: $cluster_name"
+
+## Memory
+[memory_usage]
+disabled = false
+style = "bold dimmed green"
+threshold = -1
+format = '\[$symbol[$ram( | $swap)]($style)\]'
+
+[jobs]
+# doc: https://starship.rs/config/#jobs
+symbol = "🏃️"
+threshold = 4
+format = "[$symbol_threshold $number_threshold]($style) "
+
+[python]
+pyenv_version_name = true
+detect_extensions = []
+
+[terraform]
+disabled = false
+detect_extensions = ["tf", "tfplan", "tfstate", "hcl"]
+format = " [$symbol$workspace]($style)"
+
+[time]
+symbol = "🕙"
+disabled = true
+format = "[$symbol][$time ]($style) "
+style = "bold yellow"
+use_12hr = false
+#time_format = "%Y/%m/%d %T"
+time_range = "-" # always: time_range="00:00:00-23:59:59"
+
+[env_var.AWS_PROFILE_NAME]
+symbol = "⛅"
+variable = "AWS_PROFILE_NAME"
+default = "profile name"
+style = "bold blue"
+
+[env_var.TMUX]
+default = 'tmux'
+style = 'bold green'
+format = '[🥷 ]($style)'
+
+[env_var.VISUAL]
+format = ""
+default = "nvim"
+
+[env_var.EDITOR]
+format = ""
+default = "nvim"
+
+[cmd_duration]
+min_time = 1_000
