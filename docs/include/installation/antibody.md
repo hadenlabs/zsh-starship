@@ -1,11 +1,20 @@
+<!-- Space: Projects -->
+<!-- Parent: Project -->
+<!-- Title: Installation Antibody ZshStarship -->
+<!-- Label: ZshStarship -->
+<!-- Label: Project -->
+<!-- Label: Installation -->
+<!-- Include: docs/disclaimer.md -->
+<!-- Include: ac:toc -->
+
 ### [antibody](https://github.com/getantibody/antibody) users
 
-If you're using [Antigen](https://github.com/getantibody/antibody), install this plugin by doing the following:
+If you're using [Antibody](https://github.com/getantibody/antibody), install this plugin by doing the following:
 
 1.  Add :
 
 ```{.sourceCode .bash}
-     antibody bundle hadenlabs/zsh-starship
+antibody bundle hadenlabs/zsh-starship
 ```
 
 to your `.zshrc` where you're adding your other plugins.
