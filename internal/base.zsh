@@ -6,3 +6,7 @@ function starship::internal::load {
         eval "$(starship init zsh)"
     fi
 }
+
+function starship::internal::install {
+    core::install starship
+}
