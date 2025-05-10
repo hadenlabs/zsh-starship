@@ -70,10 +70,18 @@ style = "fg:red"
 disabled = false
 
 [battery]
-disabled = false
+disabled = true
 full_symbol = "🔋"
 charging_symbol = "⚡️"
 discharging_symbol = "💀"
+
+[[battery.display]] # "bold red" style when capacity is between 0% and 10%
+threshold = 10
+style = "bold red"
+
+[[battery.display]] # "bold yellow" style when capacity is between 10% and 30%
+threshold = 30
+style = "bold yellow"
 
 [shell]
 fish_indicator = ""
@@ -86,22 +94,14 @@ disabled = false
 style = "bold fg:bright-cyan bg:#5a6374"
 format = "[  ](fg:white bg:#5a6374)[$symbol$version]($style)"
 
-[[battery.display]] # "bold red" style when capacity is between 0% and 10%
-threshold = 10
-style = "bold red"
-
-[[battery.display]] # "bold yellow" style when capacity is between 10% and 30%
-threshold = 30
-style = "bold yellow"
-
 [hostname]
-disabled = false
+disabled = true
 format = "@[$hostname]($style) "
-ssh_only = false
+ssh_only = true
 style = "bold green"
 
 [localip]
-disabled = false
+disabled = true
 ssh_only = false
 format = '@[$localipv4](bold red) '
 
