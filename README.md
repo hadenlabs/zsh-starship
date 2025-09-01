@@ -165,3 +165,6 @@ The code and styles are licensed under the LGPL-3.0 license [See project license
 ## Don't forget to 🌟 Star 🌟 the repo if you like zsh-starship
 
 [Your feedback is appreciated](https://github.com/hadenlabs/zsh-starship/issues)
+
+
+<!-- Security scan triggered at 2025-09-02 01:36:44 -->
